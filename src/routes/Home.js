@@ -10,16 +10,29 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
 import { FogExp2, OrthographicCamera, PerspectiveCamera, PlaneGeometry, PointLightHelper, SpotLightHelper, Vector3 } from 'three'
 import {FirstName, LastName} from '../components/geometry'
 import NavBar from '../components/navBar'
-import {Bomber, DeathStar, Xwing} from '../components/model3d'
+import {Bomber, Cockpit, DeathStar, Xwing} from '../components/model3d'
 import '../style/home.scss'
 
 function Dolly() {
     useFrame(({ camera }) => {
-      camera.position.z = 6 + window.scrollY /20
+      camera.position.z = 6 + window.scrollY /10
       camera.position.y = 4 - window.scrollY /400
       camera.position.x = 0 - window.scrollY /400
      
       camera.lookAt(2,2, 0)
+    })
+    return null
+  }
+
+  function Dolly2() {
+    useFrame(({ camera }) => {
+      
+        camera.position.z = 5.2
+        camera.position.y = -1.05 
+        camera.position.x = 0
+      
+     
+      camera.lookAt(0,2, 0)
     })
     return null
   }
@@ -103,9 +116,12 @@ export default function Home() {
             </header>
 
             <section id='projects'>
-                <Canvas>
+                <Canvas camera={{fov: 60 }}>
+                    <ambientLight intensity={0.3}/>
+                    <directionalLight/>
+                    <Dolly2/>
                     <Suspense fallback={null}>
-
+                        <Cockpit/>
                     </Suspense>
                     <Stars radius={60} depth={10} count={1200} factor={7} saturation={5} fade />
                 </Canvas>

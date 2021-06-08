@@ -118,3 +118,36 @@ export const DeathStar = () => {
             : null
     )
 }
+
+export const Cockpit = () => {
+
+    const gltf = useLoader(
+
+        GLTFLoader,
+        "textures/cockpit/scene.gltf",
+        loader => {
+
+            const dracoLoader = new DRACOLoader();
+            dracoLoader.setDecoderPath("/draco-gltf/");
+            loader.setDRACOLoader(dracoLoader);
+
+        }
+    );
+    
+    const ref = React.useRef()
+
+    const cockpitRef = useRef()
+
+    useFrame(()=> cockpitRef.current.rotation.y =3.15
+
+    )
+
+    return (
+
+        gltf ?
+            <group ref={ref}>
+                <primitive ref={cockpitRef} scale={2.1} position={[0, -2.1, 4.2]} object={gltf.scene} />
+            </group>
+            : null
+    )
+}

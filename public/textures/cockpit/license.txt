@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star Wars: X-Wing Cockpit
+* source:	https://sketchfab.com/3d-models/star-wars-x-wing-cockpit-7e57fce23c7b4a929f15823d58fcaa27
+* author:	Daniel (https://sketchfab.com/DanielAndersson)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star Wars: X-Wing Cockpit" (https://sketchfab.com/3d-models/star-wars-x-wing-cockpit-7e57fce23c7b4a929f15823d58fcaa27) by Daniel (https://sketchfab.com/DanielAndersson) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
