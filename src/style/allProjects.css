@@ -1,0 +1,136 @@
+@font-face {
+    font-family: AudioWide;
+    src: url('../fonts/Audiowide-Regular.ttf');
+}
+
+body{
+    background-color: black;
+}
+
+.project-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/star.jpg');
+    font-family: 'AudioWide';
+ 
+}
+
+.project-title{
+    position: relative;
+    top: 8vh;
+    text-align: center;
+    font-size: 4rem;
+    color: orange;
+   
+}
+
+.text-container{
+    position: absolute;
+    top: 70vh;
+    left: 27.5%;
+    width: 45%;
+    height: 25vh;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.7;
+    color: orange;
+  
+}
+
+.tempera1, .tempera2, .tempera3, .tempera4, .art1, .art2, .art3, .art4, .weather-app, .universe {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: 45%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.tempera1 {
+    background-image: url('../images/hackathon1.jpg');
+    z-index: 3;
+    animation: carousel1 10s infinite;
+}
+
+.tempera2 {
+    background-image: url('../images/hackathon2.jpg');
+    z-index: 2;
+    animation: carousel2 10s infinite;
+}
+
+.tempera3 {
+    background-image: url('../images/hackathon3.jpg');
+    z-index: 1;
+    animation: carousel3 10s infinite;
+}
+
+.tempera4 {
+    background-image: url('../images/hackathon4.jpg');
+    z-index: 1;
+    animation: carousel4 10s infinite;
+}
+
+
+
+
+
+
+
+
+@keyframes carousel1 {
+    0%, 10%, 20%, 100% {
+        opacity: 1
+    }
+    21%, 90% {
+        opacity: 0;
+        z-index: -1;
+    }
+    91% {
+        opacity: 0.5
+    }
+    100% {
+        z-index: 3;
+    }
+}
+
+@keyframes carousel2 {
+    0%, 10%, 100% {
+        opacity: 0
+    }
+    21%, 41% {
+        opacity: 1
+    }
+    51% {
+        opacity: 0;
+        z-index: 0
+    }
+}
+
+@keyframes carousel3 {
+    0%, 40%, 100% {
+        opacity: 0
+    }
+    41%, 51%, 60% {
+        opacity: 1
+    }
+    61% {
+        opacity: 0;
+        z-index: 0
+    }
+}
+
+@keyframes carousel4 {
+    0%, 56%, 100% {
+        opacity: 0
+    }
+    60% {
+        opacity: 1;
+        z-index: 3
+    }
+    80%, 90% {
+        opacity: 1
+    }
+}

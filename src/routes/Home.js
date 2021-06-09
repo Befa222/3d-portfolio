@@ -7,10 +7,11 @@ import { useResource } from 'react-three-fiber'
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
-import { FogExp2, OrthographicCamera, PerspectiveCamera, PlaneGeometry, PointLightHelper, SpotLightHelper, Vector3 } from 'three'
-import {FirstName, LastName} from '../components/geometry'
+import { Camera, FogExp2, OrthographicCamera, PerspectiveCamera, PlaneGeometry, PointLightHelper, SpotLightHelper, Vector3 } from 'three'
+import {FirstName, LastName, Button1, Project1, Button2} from '../components/geometry'
 import NavBar from '../components/navBar'
 import {Bomber, Cockpit, DeathStar, Xwing} from '../components/model3d'
+import {useSpring} from 'react-spring/three'
 import '../style/home.scss'
 
 function Dolly() {
@@ -55,12 +56,12 @@ const Controls = () => {
      // autoRotate
        
        
-     enableZoom={false}
+    //  enableZoom={false}
       
-    //     maxPolarAngle={Math.PI / 2.3}
-    //     minPolarAngle={Math.PI / 2.3}
-    //     minAzimuthAngle={-Math.PI / 5}
-    //    maxAzimuthAngle={Math.PI / 5}
+    //  maxPolarAngle={Math.PI / 1.95}
+    // minPolarAngle={Math.PI / 1.95}
+    // minAzimuthAngle={-Math.PI / 5}
+    // maxAzimuthAngle={Math.PI / 5}
           args={[camera, gl.domElement]}
           ref={orbitRef}
         />
@@ -89,7 +90,23 @@ const Controls = () => {
   }
 
 
+  const Stars2 = () =>{
+
+    const starRef = useRef()
+
+    return(
+      <Stars  ref={starRef} radius={80} depth={10} count={1200} factor={7} saturation={5} fade />
+    )
+  }
+  
+  
+
+
+
+
+
 export default function Home() {
+  
 
     return (
         <>
@@ -109,21 +126,26 @@ export default function Home() {
                         <DeathStar/>
                         <Reflection/>
                         <Stars radius={60} depth={10} count={1200} factor={7} saturation={5} fade />
-               
                     </Suspense>
                 
                 </Canvas>
             </header>
 
             <section id='projects'>
+
                 <Canvas camera={{fov: 60 }}>
                     <ambientLight intensity={0.3}/>
                     <directionalLight/>
+                    <spotLight position={[0, 4, 0]} color='red'/>
+             
                     <Dolly2/>
                     <Suspense fallback={null}>
                         <Cockpit/>
+                        <Button1 position={[-0.25, -1, 4]}/>
+                        <Button2 position={[-0.17, -1, 4]}/>
                     </Suspense>
-                    <Stars radius={60} depth={10} count={1200} factor={7} saturation={5} fade />
+                    <Stars2 />
+                 
                 </Canvas>
             </section>
         </>

@@ -87,3 +87,125 @@ export const FirstName = ({ args, position, color, offset=0 }) => {
       </mesh>
     )
   }
+  export const Spot = ({position, args}) => {
+
+    const spotRef = React.useRef();
+
+        useFrame(() => spotRef.current.position.set(0,-1,-1))
+    
+    return(
+
+        <SpotLight
+        color='blue'
+        ref={spotRef}
+        distance={7} // The diffuse-cone needs a fixed distance (default: 5)
+        angle={0.25} // The diffuse-cone needs a fixed angle (default: 0.15)
+        attenuation={4.5} // Diffuse-cone attenuation (default: 5)
+        anglePower={3} // Diffuse-cone anglePower (default: 5)
+        />
+    )
+}
+  export const Button1 = ({position}) => {
+
+    const [project1, setProject1] = useState(false);
+    
+ const ref= useRef()
+    return(
+      <group ref={ref}>
+      <mesh
+      position={position}
+      onClick={()=> setProject1(!project1)}
+      >
+        <circleGeometry  attach='geometry' args={[0.02,60]} postion={position}/>
+        <meshPhysicalMaterial attach='material' color='pink'/>
+      </mesh>
+      
+      {project1 && (
+        <group>
+        <Project1 position={[0,2,0]}/>
+        <Spot/>
+        </group>
+      )}
+      
+      </group>
+    )
+  }
+
+  export const Button2 = ({position}) => {
+
+  const [project2, setProject2] = useState(false);
+    
+ const ref= useRef()
+    return(
+      <group ref={ref}>
+      <mesh
+      position={position}
+      onClick={()=> setProject2(!project2)}
+      >
+        <circleGeometry  attach='geometry' args={[0.02,60]} postion={position}/>
+        <meshPhysicalMaterial attach='material' color='orange'/>
+      </mesh>
+      
+      {project2 && (
+        <group>
+        <Project2 position={[0,2,0]}/>
+        <Spot/>
+        </group>
+      )}
+      
+      </group>
+    )
+  }
+
+  export const Project1 = ({ args, position, color, map, scale }) => {
+
+    const meshRef = React.useRef();
+    useFrame(() => (meshRef.current.rotation.y += 0.005))
+
+    const colorMap = useLoader(TextureLoader, 'textures/pikachew1.png')
+  
+    const [popup1, setPopUp1] = useState(false);
+
+    return (
+        <mesh
+            position={position}
+            color={color}
+            args={args}
+            ref={meshRef}
+            onClick={() => window.open('/Pick a Chew')}
+        >
+            
+            <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
+            <meshPhysicalMaterial attach='material' 
+            map={colorMap} 
+          
+            reflectivity={1}
+            roughness={1}
+            />
+        </mesh>
+)}
+
+export const Project2 = ({ args, position, color, map, scale }) => {
+
+  const meshRef = React.useRef();
+  useFrame(() => (meshRef.current.rotation.y += 0.005))
+
+  const colorMap = useLoader(TextureLoader, 'textures/hackathon1.jpg')
+
+  return (
+      <mesh
+          position={position}
+          color={color}
+          args={args}
+          ref={meshRef}
+          onClick={() => window.open('/Tempera')}
+      >
+          <boxGeometry attach='geometry' args={[1.7, 2.5, 0.2]} position={position} />
+          <meshPhysicalMaterial attach='material' 
+          reflectivity={1}
+          roughness={1}
+          map={colorMap}
+          />
+      </mesh>
+)}
+  

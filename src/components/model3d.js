@@ -41,7 +41,7 @@ export const Bomber = () => {
 
         gltf ?
             <group ref={ref}>
-                <primitive ref={bomberRef} scale={0.007} position={[-2, 3, -4]} object={gltf.scene} />
+                <primitive ref={bomberRef} scale={0.006} position={[-2, 3, -4]} object={gltf.scene} />
             </group>
             : null
     )
