@@ -4,6 +4,8 @@ import Home from './routes/Home'
 import Contact from './routes/Contact'
 import Pika from './routes/PickAChew'
 import Tempera from './routes/Tempera'
+import Weather from './routes/WeatherApp'
+import Universe from './routes/Universe'
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <Route path='/Contact-me' component={Contact}/>
         <Route path='/Pick a Chew' component={Pika}/>
         <Route path='/Tempera' component={Tempera}/>
+        <Route path='/Weather-app' component={Weather}/>
+        <Route path='/Wild-Universe' component={Universe}/>
+      
       </Switch>
     </Router>
   );

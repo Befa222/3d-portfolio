@@ -8,15 +8,25 @@
     height: 100vh;
     background-color: black;
 }
-button{
+
+#help-container{
     position: absolute;
-    top: 150vh;
+    top: 160vh;
+    width: 35%;
+    left: 32.5%;
+    height: 16vh;
+    background: transparent;
+    font-family: Starwars;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 100;
 }
-#details1{
-    position:absolute;
-    width: 40%;
-    height: 50vh;
-    top: 140vh;
-    border : 2px solid yellow;
-    
+#test{
+    background: transparent;
+    color: yellow;
+    font-family: Starwars;
+    border: none;
+    font-size: 3rem;
+    margin: none;
+
 }
