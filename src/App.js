@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Intro from './routes/Intro'
 import Home from './routes/Home';
 import Contact from './routes/ContactMe';
 import Pika from './routes/PickAChew';
@@ -15,7 +16,8 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={Intro} />
+          <Route path='/Home' component={Home} />
           <Route path='/Contact-me' component={Contact} />
           <Route path='/Pick a Chew' component={Pika} />
           <Route path='/Tempera' component={Tempera} />

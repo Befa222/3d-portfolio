@@ -1,20 +1,11 @@
-import React, { useState, Suspense, useRef, useMemo, useEffect } from 'react'
-import { Canvas, useFrame, useLoader, useThree, extend } from '@react-three/fiber'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import { MeshWobbleMaterial, pointsMaterial, Box, useMatcapTexture, Octahedron, Reflector, Cloud, CubeCamera, Sky, Stars, SpotLight, useTexture, useProgress, Html, draco } from '@react-three/drei'
-import { useResource } from 'react-three-fiber'
-import * as THREE from "three"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
-import { Camera, FogExp2, OrthographicCamera, PerspectiveCamera, PlaneGeometry, PointLightHelper, SpotLightHelper, Vector3 } from 'three'
-import { FirstName, LastName, Button1, Project1, Button2, Button3, Button4 } from '../components/geometry'
+import React, { useState, Suspense,} from 'react'
+import { Canvas, useFrame}from '@react-three/fiber'
+import { Reflector, Stars } from '@react-three/drei'
+import { FirstName, LastName, Button1, Button2, Button3, Button4 } from '../components/geometry'
 import NavBar from '../components/navBar'
 import { Bomber, Cockpit, DeathStar, Xwing } from '../components/model3d'
-import { useSpring, a } from 'react-spring/three'
-import {Noise, EffectComposer} from '@react-three/postprocessing'
 import '../style/home.scss'
-import {Link} from 'react-router-dom'
+
 
 function Dolly() {
   useFrame(({ camera }) => {
@@ -40,34 +31,31 @@ function Dolly2() {
   return null
 }
 
-extend({ OrbitControls })
+//extend({ OrbitControls })
 
-const Controls = () => {
-  const orbitRef = useRef()
-  const { camera, gl } = useThree()
+// const Controls = () => {
+//   const orbitRef = useRef()
+//   const { camera, gl } = useThree()
 
-  useFrame(() => {
-    orbitRef.current.update()
-  })
+//   useFrame(() => {
+//     orbitRef.current.update()
+//   })
 
-  return (
-    <>
-      <orbitControls
-        // autoRotate
-
-
-        //  enableZoom={false}
-
-        //  maxPolarAngle={Math.PI / 1.95}
-        // minPolarAngle={Math.PI / 1.95}
-        // minAzimuthAngle={-Math.PI / 5}
-        // maxAzimuthAngle={Math.PI / 5}
-        args={[camera, gl.domElement]}
-        ref={orbitRef}
-      />
-    </>
-  )
-}
+//   return (
+//     <>
+//       <orbitControls
+//         // autoRotate
+//         //  enableZoom={false}
+//         //  maxPolarAngle={Math.PI / 1.95}
+//         // minPolarAngle={Math.PI / 1.95}
+//         // minAzimuthAngle={-Math.PI / 5}
+//         // maxAzimuthAngle={Math.PI / 5}
+//         args={[camera, gl.domElement]}
+//         ref={orbitRef}
+//       />
+//     </>
+//   )
+// }
 
 const Reflection = ({ position }) => {
 
@@ -90,31 +78,16 @@ const Reflection = ({ position }) => {
 }
 
 
-const Stars2 = () => {
-
-  const starRef = useRef()
-
-  return (
-    <Stars ref={starRef} radius={80} depth={10} count={1200} factor={7} saturation={5} fade />
-  )
-}
-
-
-
-
 export default function Home() {
 
   const [pop, setPop] = useState(true);
 
-
   return (
-    <>
+    <div id='page-container'>
       <header id='intro'>
         <NavBar />
         <Canvas camera={{ fov: 60 }}>
-
           <Dolly />
-
           <directionalLight intensity={1} position={[0, 1, 5]} />
           <directionalLight intensity={1} position={[0, 4, -2]} />
           <Suspense fallback={null}>
@@ -134,14 +107,13 @@ export default function Home() {
           <div id='help-container'>
             <p>Click on the colored circles below to reveal their projects.</p>
             <p>Click on a project for details.</p>
-            <button id='test' onClick={() => setPop(!pop)}>ok</button>
+            <button id='ok-button' onClick={() => setPop(!pop)}>ok</button>
           </div>
         )}
         <Canvas camera={{ fov: 60 }}>
           <ambientLight intensity={0.3} />
           <directionalLight />
           <spotLight position={[0, 4, 0]} color='red' />
-          
           <Dolly2 />
           <Suspense fallback={null}>
             <Cockpit />
@@ -149,11 +121,10 @@ export default function Home() {
             <Button2 position={[-0.17, -1.005, 4]} />
             <Button3 position={[0.04, -1.005, 4]} />
             <Button4 position={[0.12, -1.005, 4]} />
-            <Stars2 />
-            
           </Suspense>
+          <Stars radius={80} depth={10} count={1200} factor={7} saturation={5} fade />
         </Canvas>
       </section>
-    </>
+    </div>
   )
 }

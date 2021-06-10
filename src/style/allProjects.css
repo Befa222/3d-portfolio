@@ -8,7 +8,7 @@
     height: 100vh;
     background-image: url('../images/starBG.png');
     font-family: 'AudioWide';
-    animation: fade 1s ease-out;
+    animation: fade 2s linear;
 }
 .project-container1{
     color: rgb(0, 153, 255);
