@@ -3,28 +3,32 @@
     src: url('../fonts/Audiowide-Regular.ttf');
 }
 
-body{
-    background-color: black;
-}
-
-.project-container, .project-container2{
+.project-container1, .project-container2, .project-container3, .project-container4{
     width: 100%;
     height: 100vh;
-    background-image: url('../images/star.jpg');
+    background-image: url('../images/starBG.png');
     font-family: 'AudioWide';
-
+    animation: fade 1s ease-out;
 }
-.project-container{
-    color: orange;
+.project-container1{
+    color: rgb(0, 153, 255);
 }
 .project-container2{
+    color: orange;
+}
+.project-container3{
     color: rgb(4, 199, 4);
+}
+.project-container4{
+    color: rgb(182, 6, 226);
 }
 .project-title{
     position: relative;
     top: 8vh;
     text-align: center;
     font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 0.5em white;
 }
 
 .text-container{
@@ -38,7 +42,33 @@ body{
     line-height: 1.7;
 }
 
-.tempera1, .tempera2, .tempera3, .tempera4, .art1, .art2, .art3, .art4, .weather-app, .universe {
+.netlify-button-weather, .netlify-button-universe{
+    position: absolute;
+    width: 7em;
+    height: 7em;
+    top: 35vh;
+    background: transparent;
+    color: red;
+    padding: 0.5em 0.6em 0.5em 0.6em;
+    font-size: 1.5rem;
+    border: 0.2em solid red;
+    box-shadow: 0 0 0.5em red, inset 0 0 0.5em red;
+    text-shadow: 0 0 0.8em red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.netlify-button-weather{
+    left: 60%;
+}
+.netlify-button-universe{
+    left: 80%;
+}
+.netlify-button-weather:hover, .netlify-button-universe:hover{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.tempera1, .tempera2, .tempera3, .tempera4, .pika1, .pika2, .pika3, .pika4, .weather-app, .universe {
     position: absolute;
     top: 20%;
     left: 5%;
@@ -48,7 +78,29 @@ body{
     background-position: center;
     background-size: contain;
 }
+.pika1 {
+    background-image: url('../images/pickachew1.jpg');
+    z-index: 3;
+    animation: carousel1 10s infinite;
+}
 
+.pika2 {
+    background-image: url('../images/pickachew2.jpg');
+    z-index: 2;
+    animation: carousel2 10s infinite;
+}
+
+.pika3 {
+    background-image: url('../images/pickachew3.jpg');
+    z-index: 1;
+    animation: carousel3 10s infinite;
+}
+
+.pika4 {
+    background-image: url('../images/pickachew4.jpg');
+    z-index: 1;
+    animation: carousel4 10s infinite;
+}
 
 .tempera1 {
     background-image: url('../images/hackathon1.jpg');
@@ -78,11 +130,17 @@ body{
     background-image: url('../images/weather.jpg');
 }
 
+.universe{
+    background-image: url('../images/wildUniverse.jpg');
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 
-
-
-
+/* ////////////////// KEYFRAMES CAROUSEL ///////////////////////////*/
 
 @keyframes carousel1 {
     0%, 10%, 20%, 100% {

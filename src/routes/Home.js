@@ -11,13 +11,15 @@ import { Camera, FogExp2, OrthographicCamera, PerspectiveCamera, PlaneGeometry, 
 import { FirstName, LastName, Button1, Project1, Button2, Button3, Button4 } from '../components/geometry'
 import NavBar from '../components/navBar'
 import { Bomber, Cockpit, DeathStar, Xwing } from '../components/model3d'
-import { useSpring } from 'react-spring/three'
+import { useSpring, a } from 'react-spring/three'
+import {Noise, EffectComposer} from '@react-three/postprocessing'
 import '../style/home.scss'
+import {Link} from 'react-router-dom'
 
 function Dolly() {
   useFrame(({ camera }) => {
     camera.position.z = 6 + window.scrollY / 10
-    camera.position.y = 4 - window.scrollY / 400
+    camera.position.y = 4 - window.scrollY / 80
     camera.position.x = 0 - window.scrollY / 400
 
     camera.lookAt(2, 2, 0)
@@ -37,8 +39,6 @@ function Dolly2() {
   })
   return null
 }
-
-
 
 extend({ OrbitControls })
 
@@ -132,7 +132,7 @@ export default function Home() {
       <section id='projects'>
         {pop && (
           <div id='help-container'>
-            <p>Click on the colored circle below to reveal their projects.</p>
+            <p>Click on the colored circles below to reveal their projects.</p>
             <p>Click on a project for details.</p>
             <button id='test' onClick={() => setPop(!pop)}>ok</button>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
           <ambientLight intensity={0.3} />
           <directionalLight />
           <spotLight position={[0, 4, 0]} color='red' />
-
+          
           <Dolly2 />
           <Suspense fallback={null}>
             <Cockpit />
@@ -150,6 +150,7 @@ export default function Home() {
             <Button3 position={[0.04, -1.005, 4]} />
             <Button4 position={[0.12, -1.005, 4]} />
             <Stars2 />
+            
           </Suspense>
         </Canvas>
       </section>
