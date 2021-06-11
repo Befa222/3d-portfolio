@@ -107,7 +107,7 @@ export const DeathStar = () => {
 
         gltf ?
             <group ref={ref}>
-                <primitive ref={deathSRef} scale={0.003} position={[9, 4, -3]} object={gltf.scene} />
+                <primitive ref={deathSRef} scale={0.004} position={[11, 3.5, -3]} object={gltf.scene} />
             </group>
             : null
     )

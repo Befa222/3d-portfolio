@@ -19,7 +19,7 @@ function App() {
           <Route path='/' exact component={Intro} />
           <Route path='/Home' component={Home} />
           <Route path='/Contact-me' component={Contact} />
-          <Route path='/Pick a Chew' component={Pika} />
+          <Route path='/Pick-a-Chew' component={Pika} />
           <Route path='/Tempera' component={Tempera} />
           <Route path='/Weather-app' component={Weather} />
           <Route path='/Wild-Universe' component={Universe} />

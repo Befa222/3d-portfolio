@@ -5,7 +5,7 @@
     top:0;
     left:0;
     font-family: 'Starwars';
-    font-size: 2rem;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     z-index: 100;
     
 
@@ -22,10 +22,12 @@ ul{
 }
 li{
     display: inline;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     padding: 0.05em 0.3em 0.09em 0.3em;
-    border: 0.1em solid yellow;
-    border-radius: 0.3em;
     cursor: pointer;
+}
+
+li:hover{
+    font-family: Starwars2;
 }

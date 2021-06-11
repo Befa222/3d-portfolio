@@ -9,8 +9,6 @@ import '../style/home.scss'
 
 export const FirstName = ({ args, position, color, offset = 0 }) => {
 
-  const yellowTexture = useLoader(TextureLoader, 'textures/yellow.jpg')
-
   const FirstNRef = React.useRef();
 
   useFrame(() => (FirstNRef.current.geometry.center()))
@@ -19,7 +17,7 @@ export const FirstName = ({ args, position, color, offset = 0 }) => {
     FirstNRef.current.rotation.y = Math.sin(offset + clock.elapsedTime) * 0.15
   })
 
-  const font = new THREE.FontLoader().parse(JSONfont);
+ const font = new THREE.FontLoader().parse(JSONfont);
 
   const textOptions = {
     font,
@@ -35,8 +33,8 @@ export const FirstName = ({ args, position, color, offset = 0 }) => {
       ref={FirstNRef}
     >
       <textBufferGeometry attach='geometry' args={['Fabien', textOptions]} position={position} />
-      <meshPhysicalMaterial attach='material' map={yellowTexture} color='yellow'
-        metalness={1}
+      <meshPhysicalMaterial attach='material'  color='rgb(233, 198, 45);'
+        metalness={0.9}
         roughness={0.2}
         clearcoat={1}
         reflectivity={1}
@@ -47,14 +45,13 @@ export const FirstName = ({ args, position, color, offset = 0 }) => {
 
 export const LastName = ({ args, position, color, offset = 0 }) => {
 
-  const yellowTexture = useLoader(TextureLoader, 'textures/yellow.jpg')
 
   const lastNRef = React.useRef();
 
   useFrame(() => (lastNRef.current.geometry.center()))
 
   useFrame(({ clock }) => {
-    lastNRef.current.rotation.y = Math.sin(offset + clock.elapsedTime) * 0.15
+    lastNRef.current.rotation.y = -Math.sin(offset + clock.elapsedTime) * 0.15
   })
 
   const font = new THREE.FontLoader().parse(JSONfont);
@@ -73,7 +70,7 @@ export const LastName = ({ args, position, color, offset = 0 }) => {
       ref={lastNRef}
     >
       <textBufferGeometry attach='geometry' args={['Lallement', textOptions]} position={position} />
-      <meshPhysicalMaterial attach='material' map={yellowTexture} color='yellow'
+      <meshPhysicalMaterial attach='material' color='rgb(233, 198, 45);'
         metalness={1}
         roughness={0.2}
         clearcoat={1}
@@ -217,7 +214,7 @@ export const Project1 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={() => window.open('/Pick a Chew')}
+      onClick={() => window.open('/Pick-a-Chew')}
     >
       <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'

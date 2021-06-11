@@ -1,5 +1,5 @@
-import React, { useState, Suspense,} from 'react'
-import { Canvas, useFrame}from '@react-three/fiber'
+import React, { useState, Suspense, } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { Reflector, Stars } from '@react-three/drei'
 import { FirstName, LastName, Button1, Button2, Button3, Button4 } from '../components/geometry'
 import NavBar from '../components/navBar'
@@ -80,34 +80,44 @@ const Reflection = ({ position }) => {
 
 export default function Home() {
 
-  const [pop, setPop] = useState(true);
+  const [popProject, setPopProject] = useState(true);
 
   return (
     <div id='page-container'>
       <header id='intro'>
+        <div className='warning'><h1>please tilt your device in landscape mode</h1></div>
+        <div className='laser'></div>
+        <div className='laser2'></div>
+        <div className='laser3'></div>
+        <div className='laser4'></div>
         <NavBar />
         <Canvas camera={{ fov: 60 }}>
           <Dolly />
-          <directionalLight intensity={1} position={[0, 1, 5]} />
-          <directionalLight intensity={1} position={[0, 4, -2]} />
+          <directionalLight intensity={3} position={[0, 0.7, 5]} />
           <Suspense fallback={null}>
             <FirstName position={[0, 4, -2]} />
             <LastName position={[1.7, 2, -2]} />
-            <Bomber />
-            <Xwing />
-            <DeathStar />
-            <Reflection />
-            <Stars radius={60} depth={10} count={1200} factor={7} saturation={5} fade />
           </Suspense>
+          <Suspense fallback={null}>
+            <Bomber />
+          </Suspense>
+          <Suspense fallback={null}>
+            <Xwing />
+          </Suspense>
+          <Suspense fallback={null}>
+            <DeathStar />
+          </Suspense>
+          <Reflection />
+          <Stars radius={60} depth={10} count={1200} factor={7} saturation={5} fade />
         </Canvas>
       </header>
 
       <section id='projects'>
-        {pop && (
+        {popProject && (
           <div id='help-container'>
             <p>Click on the colored circles below to reveal their projects.</p>
             <p>Click on a project for details.</p>
-            <button id='ok-button' onClick={() => setPop(!pop)}>ok</button>
+            <button id='ok-button' onClick={() => setPopProject(!popProject)}>ok</button>
           </div>
         )}
         <Canvas camera={{ fov: 60 }}>
@@ -117,9 +127,17 @@ export default function Home() {
           <Dolly2 />
           <Suspense fallback={null}>
             <Cockpit />
+          </Suspense>
+          <Suspense fallback={null}>
             <Button1 position={[-0.25, -1.005, 4]} />
+          </Suspense>
+          <Suspense fallback={null}>
             <Button2 position={[-0.17, -1.005, 4]} />
+          </Suspense>
+          <Suspense fallback={null}>
             <Button3 position={[0.04, -1.005, 4]} />
+          </Suspense>
+          <Suspense fallback={null}>
             <Button4 position={[0.12, -1.005, 4]} />
           </Suspense>
           <Stars radius={80} depth={10} count={1200} factor={7} saturation={5} fade />

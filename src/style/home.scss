@@ -1,43 +1,108 @@
+@media (orientation: landscape){
+    .warning{
+    display: none;
+}
+}
+@media all and (orientation: portrait){
+   .warning{
+    position: absolute;
+    width: 70%;
+    height: 80vh;
+    background-color: rgb(233, 198, 45);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: black;
+    font-family: Starwars2;
+    text-align: center;
+
+    h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    }
+    }
 #page-container{
     background-image: url('../images/starBG.png');
     animation: fade 1s linear;
 }
-
 #video-container{
     width:100%;
     height: 100vh;
 }
-#skip-button, #start-button{
+#next-button, #start-button{
     position: absolute;
     font-family: 'Starwars';
     background: transparent;
-    color: rgb(251, 241, 93);
+    color: rgb(233, 198, 45);
     font-size: 2rem;
     border: none;
 }
-#skip-button{
+#next-button{
+    opacity: 0;
     right: 5vw;
     bottom: 5vh;
     cursor: pointer;
+    animation: fade 1s linear forwards;
+    animation-delay: 10s;
 }
 #start-button{
-    top: 5vh;
-    left: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
+    font-size: 3rem;
 }
-
 #intro{
     width: 100%;
     height: 100vh;
     background: black;
     animation: fade 4s linear;
 }
+.laser, .laser2{
+    opacity: 0;
+    position: absolute;
+    left: 53%;
+    width: 3%;
+    height: 0.1vh;
+    border : 1px solid red;
+    border : 1px solid red;
+    box-shadow: 0 0 0.3em red, inset 0 0 0.3em red;
+    animation: laser 21s linear infinite;
+    animation-delay: 22s;
+}
+.laser{
+    top: 35vh;
+}
+.laser2{
+    top: 30vh;
+}
+.laser3, .laser4{
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    width: 3%;
+    height: 0.1vh;
+    border : 1px solid red;
+    border : 1px solid red;
+    box-shadow: 0 0 0.3em red, inset 0 0 0.3em red;
+    animation: laser2 21s linear infinite;
+    animation-delay: 22.5s;
+}
+.laser3{
+    top: 35vh;
+}
+.laser4{
+    top: 30vh;
+}
 #projects{
     width: 100%;
     height: 100vh;
     background-color: black;
 }
-
 #help-container{
     position: absolute;
     top: 160vh;
@@ -46,21 +111,38 @@
     height: 16vh;
     background: transparent;
     font-family: Starwars;
-    font-size: 2rem;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     text-align: center;
     z-index: 100;
 }
 #ok-button{
     background: transparent;
-    color: yellow;
+    color: rgb(233, 198, 45);;
     font-family: Starwars;
     border: none;
-    font-size: 3rem;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     margin: none;
     cursor: pointer;
 }
 #ok-button:hover{
     transform: scale(1.1);
+}
+
+////////////////// KEYFRAMES //////////////////////
+
+@keyframes laser {
+    0% {opacity: 0; left: 53%}
+    1% {opacity: 1;}
+    2% {left: 25%; opacity: 0.5;}
+    3% {left:25%; opacity: 0;}
+    100% {left:53%; opacity: 0; }
+}
+@keyframes laser2 {
+    0% {opacity: 0; left: 50%}
+    1% {opacity: 1;}
+    2% {left: 22%; opacity: 0.5;}
+    3% {left:22%; opacity: 0;}
+    100% {left:50%; opacity: 0; }
 }
 
 @keyframes fade {

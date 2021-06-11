@@ -81,49 +81,49 @@
 .pika1 {
     background-image: url('../images/pickachew1.jpg');
     z-index: 3;
-    animation: carousel1 10s infinite;
+    animation: carousel1 14s infinite;
 }
 
 .pika2 {
     background-image: url('../images/pickachew2.jpg');
     z-index: 2;
-    animation: carousel2 10s infinite;
+    animation: carousel2 14s infinite;
 }
 
 .pika3 {
     background-image: url('../images/pickachew3.jpg');
     z-index: 1;
-    animation: carousel3 10s infinite;
+    animation: carousel3 14s infinite;
 }
 
 .pika4 {
     background-image: url('../images/pickachew4.jpg');
     z-index: 1;
-    animation: carousel4 10s infinite;
+    animation: carousel4 14s infinite;
 }
 
 .tempera1 {
     background-image: url('../images/hackathon1.jpg');
     z-index: 3;
-    animation: carousel1 10s infinite;
+    animation: carousel1 14s infinite;
 }
 
 .tempera2 {
     background-image: url('../images/hackathon2.jpg');
     z-index: 2;
-    animation: carousel2 10s infinite;
+    animation: carousel2 14s infinite;
 }
 
 .tempera3 {
     background-image: url('../images/hackathon3.jpg');
     z-index: 1;
-    animation: carousel3 10s infinite;
+    animation: carousel3 14s infinite;
 }
 
 .tempera4 {
     background-image: url('../images/hackathon4.jpg');
     z-index: 1;
-    animation: carousel4 10s infinite;
+    animation: carousel4 14s infinite;
 }
 
 .weather-app{
