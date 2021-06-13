@@ -6,12 +6,12 @@ import { useState } from 'react'
 
 export default function Intro() {
 
-    const [video, setVideo] = useState(false)
+    const [videoI, setVideoI] = useState(false)
 
     const [startButton, setStartButton] = useState(true)
 
     function startVideo() {
-        (video) ? setVideo(false) : setVideo(true)
+        (videoI) ? setVideoI(false) : setVideoI(true)
     }
 
 
@@ -20,7 +20,7 @@ export default function Intro() {
             {startButton && (
                 <button id='start-button' onClick={startVideo}>start</button>
             )}
-            {video && (
+            {videoI && (
                 <div>
                     <video autoPlay={true} muted={false} onPlay={() => setStartButton(!startButton)}
                         style={{

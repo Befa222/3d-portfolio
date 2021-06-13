@@ -100,6 +100,7 @@ export const Spot = ({ position, args }) => {
 export const Button1 = ({ position }) => {
 
   const [project1, setProject1] = useState(false);
+  const [project2, setProject2] = useState(false);
 
   const ref = useRef()
   return (

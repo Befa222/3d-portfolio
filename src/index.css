@@ -20,9 +20,7 @@ body{
 ::-webkit-scrollbar{
   width: 0.5vw;
 }
-::-webkit-scrollbar:hover{
-  width: 1vw;
-}
+
 
 ::-webkit-scrollbar-track{
   background: black;

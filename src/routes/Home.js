@@ -1,10 +1,16 @@
-import React, { useState, Suspense, } from 'react'
+import React, { useState, Suspense, UseP } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Reflector, Stars } from '@react-three/drei'
+import { Reflector, Stars, useProgress, Html } from '@react-three/drei'
 import { FirstName, LastName, Button1, Button2, Button3, Button4 } from '../components/geometry'
 import NavBar from '../components/navBar'
 import { Bomber, Cockpit, DeathStar, Xwing } from '../components/model3d'
 import '../style/home.scss'
+
+
+function Loader() {
+  const { active, progress, errors, item, loaded, total } = useProgress()
+  return <Html><div className='progress-bar'>{progress.toFixed(0)} %</div></Html>
+}
 
 
 function Dolly() {
@@ -94,17 +100,12 @@ export default function Home() {
         <Canvas camera={{ fov: 60 }}>
           <Dolly />
           <directionalLight intensity={3} position={[0, 0.7, 5]} />
-          <Suspense fallback={null}>
+
+          <Suspense fallback={<Loader />}>
             <FirstName position={[0, 4, -2]} />
             <LastName position={[1.7, 2, -2]} />
-          </Suspense>
-          <Suspense fallback={null}>
             <Bomber />
-          </Suspense>
-          <Suspense fallback={null}>
             <Xwing />
-          </Suspense>
-          <Suspense fallback={null}>
             <DeathStar />
           </Suspense>
           <Reflection />

@@ -125,9 +125,18 @@
     cursor: pointer;
 }
 #ok-button:hover{
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
+.progress-bar{
+    position: absolute;
+    width: 20vw;
+    top: -30vh;
+    left: 11vw;
+    font-size: 3rem;
+    font-family: Audiowide;
+    
+}
 ////////////////// KEYFRAMES //////////////////////
 
 @keyframes laser {
