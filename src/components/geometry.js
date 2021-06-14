@@ -5,6 +5,7 @@ import { SpotLight } from '@react-three/drei'
 import * as THREE from "three"
 import JSONfont from '../fonts/StarJedi Special Edition_Regular.json'
 import '../style/home.scss'
+import {Link} from 'react-router-dom'
 
 
 export const FirstName = ({ args, position, color, offset = 0 }) => {
@@ -100,7 +101,6 @@ export const Spot = ({ position, args }) => {
 export const Button1 = ({ position }) => {
 
   const [project1, setProject1] = useState(false);
-  const [project2, setProject2] = useState(false);
 
   const ref = useRef()
   return (
@@ -217,7 +217,7 @@ export const Project1 = ({ args, position, color, map, scale }) => {
       ref={meshRef}
       onClick={() => window.open('/Pick-a-Chew')}
     >
-      <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
+    <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'
         map={colorMap}
         reflectivity={1}

@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 
-a, h1, h2, p{
+a, h1, h2{
   margin:0;
 }
 a{
   text-decoration: none;
-  color: rgb(233, 198, 45);;
+  color: rgb(233, 198, 45);
 }
 body{
   width:100%;
@@ -38,4 +38,8 @@ body{
 @font-face {
   font-family: Starwars2;
   src: url('./fonts/STJEDISE.TTF');
+}
+@font-face {
+  font-family: AudioWide;
+  src: url('./fonts/Audiowide-Regular.ttf');
 }

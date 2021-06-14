@@ -1,0 +1,41 @@
+.credits{
+    width:100%;
+    height: 100vh;
+    background-image: url('../images/starBG.png');
+    animation: fade 1.5s linear;
+    text-align: center;
+    font-family: Audiowide;
+}
+.credits h1{
+    position: relative;
+    top: 8vh;
+    font-family: Starwars;
+    text-align: center;
+    font-size: 3rem;
+}
+.credits-text{
+    position: relative;
+    top: 12vh;
+    font-size: 1.8rem;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.credits-text a, .artists-links a{
+    text-decoration: underline;
+}
+.credits-text a:hover, .artists-links a:hover{
+    color: blue;
+}
+.credits h2{
+    position: relative;
+    top: 18vh;
+    font-family: Starwars;
+    font-size: 2.5rem;
+}
+.artists-links{
+    position: relative;
+    top: 23vh;
+}
+.artists-links h3, a{
+    font-size: 1.8rem;
+}

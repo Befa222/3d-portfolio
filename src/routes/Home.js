@@ -8,7 +8,7 @@ import '../style/home.scss'
 
 
 function Loader() {
-  const { active, progress, errors, item, loaded, total } = useProgress()
+  const {progress} = useProgress()
   return <Html><div className='progress-bar'>{progress.toFixed(0)} %</div></Html>
 }
 
@@ -91,7 +91,6 @@ export default function Home() {
   return (
     <div id='page-container'>
       <header id='intro'>
-        <div className='warning'><h1>please tilt your device in landscape mode</h1></div>
         <div className='laser'></div>
         <div className='laser2'></div>
         <div className='laser3'></div>

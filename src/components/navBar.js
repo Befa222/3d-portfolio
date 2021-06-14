@@ -7,11 +7,11 @@ export default function NavBar() {
     return (
 
         <div className='navBar'>
-            <h1>FL</h1>
+        <Link to='/Home'><h1 id='initials'>FL</h1></Link> 
             <ul>
-                <Link to='/About-me' target='blank'><li>About</li></Link>
-                <Link to='/Contact-me' target='blank'><li>Contact</li></Link>
-                <Link to='/Credits-to-artists' target='blank'><li>3d models credits</li></Link>
+                <Link to='/About-me'><li>About</li></Link>
+                <Link to='/Contact-me'><li>Contact</li></Link>
+                <Link to='/Credits-to-artists'><li>3d models credits</li></Link>
             </ul>
         </div>
 
