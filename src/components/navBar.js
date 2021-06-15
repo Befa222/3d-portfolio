@@ -14,20 +14,20 @@ export default function NavBar() {
     return (
 
         <div className='navBar'>
-            <Link to='/Home'><h1 id='initials'>FL</h1></Link>
+            <Link to='/Home'><h1 id='initials'>fL</h1></Link>
             <ul>
                 <Link to='/About-me'><li>About</li></Link>
                 <Link to='/Contact-me'><li>contact</li></Link>
-                <li className='ppp' onClick={DropDown}>projects</li>
+                <li onClick={DropDown}>projects</li>
                 <Link to='/Credits-to-artists'><li>credits</li></Link>
 
             </ul>
             {list && (
                 <div className='nav-project-list'>
-                    <h2>Pick a Chew</h2>
-                    <h2>Tempera</h2>
-                    <h2>Weather app</h2>
-                    <h2>Wild universe</h2>
+                    <Link to='/Pick-a-Chew'><h2>Pick a Chew</h2></Link>
+                    <Link to='/Tempera'><h2>Tempera</h2></Link>
+                    <Link to='/Weather-app'><h2>Weather app</h2></Link>
+                    <Link to='/Wild-Universe'><h2>Wild universe</h2></Link>
                 </div>
             )}
         </div>

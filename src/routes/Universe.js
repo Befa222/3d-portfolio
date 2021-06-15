@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from '../components/navBar'
 
 export default function Universe() {
     return (
         <div className='project-container4'>
-
+            <NavBar/>
             <h1 className='project-title'>WILD UNIVERSE</h1>
 
             <div className='universe'></div>

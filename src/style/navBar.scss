@@ -30,21 +30,31 @@ li{
     padding: 0.05em 0.3em 0.09em 0.3em;
     cursor: pointer;
     font-size: 1.5vw;
+    color: rgb(233, 198, 45);
 }
 
 li:hover{
 font-family: Starwars2;
 }
-
-
 .nav-project-list{
     position: fixed;
-    top: 5vh;
+    top: 5.5vh;
     right: 9vw;
     text-align: center;
     width: 10vw;
     color: black;
+    font-size: 0.85vw;
     background: rgb(233, 198, 45);
     font-family: Audiowide;
     border-radius: 0.7em;
+    animation: fade 0.7s linear;
+    a{
+        font-size: 0.85vw;
+        color: black;
+    }
+    h2:hover{
+        color: rgb(233, 198, 45);
+        background-color: black;
+        cursor: pointer;
+    }
 }

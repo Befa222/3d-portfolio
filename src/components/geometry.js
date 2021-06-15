@@ -215,7 +215,7 @@ export const Project1 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={()=> window.open('/Pick-a-Chew')}
+      onClick={()=> window.location.href=('/Pick-a-Chew')}
     >
     <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'
@@ -240,7 +240,7 @@ export const Project2 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={() => window.open('/Tempera')}
+      onClick={() => window.location.href=('/Tempera')}
     >
       <boxGeometry attach='geometry' args={[1.7, 2.5, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'
@@ -265,7 +265,7 @@ export const Project3 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={() => window.open('/Weather-app')}
+      onClick={() => window.location.href=('/Weather-app')}
     >
       <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'
@@ -290,7 +290,7 @@ export const Project4 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={() => window.open('/Wild-universe')}
+      onClick={() => window.location.href=('/Wild-universe')}
     >
       <boxGeometry attach='geometry' args={[3, 2, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'

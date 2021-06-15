@@ -1,10 +1,11 @@
 import React from 'react'
+import NavBar from '../components/navBar'
 import '../style/allProjects.css'
 
 export default function Tempera() {
     return (
         <div className='project-container2'>
-
+            <NavBar/>
             <h1 className='project-title'>TEMPERA</h1>
             
             <div className='tempera1'></div>

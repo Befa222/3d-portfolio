@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from '../components/navBar'
 
 export default function WeatherApp() {
     return (
         <div className='project-container3'>
-
+            <NavBar/>
             <h1 className='project-title'>WEATHER APP</h1>
 
             <div className='weather-app'></div>
