@@ -4,7 +4,6 @@
     --blade-hue3: 270;
     --blade-lightness: 50%;
 }
-
 .hilt, .hilt2, .hilt3 {
     position: relative;
     display: block;
@@ -73,5 +72,26 @@
     }
     100% {
         height: 18rem
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px){
+    .hilt, .hilt2, .hilt3{
+        transform: rotate(90deg) scale(0.5);
+        top: -3vh;
+    }
+    .hilt::after, .hilt2::after, .hilt3::after{
+        bottom: 4.7rem;
+    }
+}
+
+
+ @media (orientation: landscape) and (min-width: 901px) and (max-width: 1425px){
+    .hilt, .hilt2, .hilt3{
+        transform: rotate(90deg) scale(0.7);
+        top: -1vh;
+    }
+    .hilt::after, .hilt2::after, .hilt3::after{
+        bottom: 4.55rem;
     }
 }

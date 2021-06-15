@@ -33,31 +33,28 @@
     width: 45%;
     height: 25vh;
     text-align: center;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     line-height: 1.7;
 }
 
 .netlify-button-weather, .netlify-button-universe{
     position: absolute;
-    width: 7em;
-    height: 7em;
-    top: 75vh;
+    width: 8vw;
+    height: 8vw;
+    right: 23vw;
+    bottom: 4vh;
     background: transparent;
     color: red;
     padding: 0.5em 0.6em 0.5em 0.6em;
-    font-size: 1.5rem;
+    font-size: 1.4vw;
     border: 0.2em solid red;
     box-shadow: 0 0 0.5em red, inset 0 0 0.5em red;
     text-shadow: 0 0 0.8em red;
     border-radius: 50%;
     cursor: pointer;
 }
-.netlify-button-weather{
-    right: 23vw;
-}
-.netlify-button-universe{
-    right: 23vw;
-}
+
+
 .netlify-button-weather:hover, .netlify-button-universe:hover{
     transform: scale(1.1);
     transition-duration: 0.2s;

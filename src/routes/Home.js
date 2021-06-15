@@ -91,10 +91,10 @@ export default function Home() {
   return (
     <div id='page-container'>
       <header id='intro'>
-        <div className='laser'></div>
+        {/* <div className='laser'></div>
         <div className='laser2'></div>
         <div className='laser3'></div>
-        <div className='laser4'></div>
+        <div className='laser4'></div> */}
         <NavBar />
         <Canvas camera={{ fov: 60 }}>
           <Dolly />

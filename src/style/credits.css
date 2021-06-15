@@ -8,7 +8,7 @@
 }
 .credits h1{
     position: relative;
-    top: 8vh;
+    top: 10vh;
     font-family: Starwars;
     text-align: center;
     font-size: 2.1vw;
@@ -18,7 +18,7 @@
 .credits-text{
     position: relative;
     top: 12vh;
-    font-size: 1.8rem;
+    font-size: 1.7vw;
     margin-left: 3em;
     margin-right: 3em;
 }
@@ -41,5 +41,5 @@
     top: 23vh;
 }
 .artists-links h3, a{
-    font-size: 1.8rem;
+    font-size: 1.7vw;
 }
