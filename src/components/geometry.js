@@ -215,7 +215,7 @@ export const Project1 = ({ args, position, color, map, scale }) => {
       color={color}
       args={args}
       ref={meshRef}
-      onClick={() => window.open('/Pick-a-Chew')}
+      onClick={()=> window.location.href='/Pick-a-Chew'}
     >
     <boxGeometry attach='geometry' args={[1.2, 3, 0.2]} position={position} />
       <meshPhysicalMaterial attach='material'

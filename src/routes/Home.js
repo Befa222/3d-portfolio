@@ -117,7 +117,7 @@ export default function Home() {
           <div id='help-container'>
             <p>Click on the colored circles below to reveal their projects.</p>
             <p>Click on a project for details.</p>
-            <button id='ok-button' onClick={() => setPopProject(!popProject)}>ok</button>
+            <button id='ok-button' onClick={() => setPopProject(!popProject)}>dismiss</button>
           </div>
         )}
         <Canvas camera={{ fov: 60 }}>

@@ -4,7 +4,7 @@
     position: fixed;
     top:0;
     left:0;
-    font-family: 'Starwars';
+    font-family: Starwars;
     z-index: 100;
 }
 #initials{
@@ -12,6 +12,8 @@
     top: -1vh;
     left:1vw;
     font-size: 2vw;
+    color: rgb(233, 198, 45);
+    text-shadow: none;
 }
 ul{
     position: fixed;

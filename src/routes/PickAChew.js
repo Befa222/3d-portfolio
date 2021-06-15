@@ -1,10 +1,11 @@
 import React from 'react'
+import NavBar from '../components/navBar'
 
 export default function PickAChew() {
     return (
         <div className='project-container1'>
-
-            <h1 className='project-title'>PICK A CHEW</h1>
+            <NavBar/>
+            <h1 className='project-title'>Pick a Chew</h1>
             
             <div className='pika1'></div>
             <div className='pika2'></div>

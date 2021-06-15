@@ -7,7 +7,7 @@ export default function AboutMe() {
     return (
         <div className='about-me-container'>
             <NavBar/>
-            <h1>about me</h1>
+            <h1>About me</h1>
             <img src={myPicture} alt='Fab' />
             <div className='about-text'>
             <h2>WELCOME!</h2>

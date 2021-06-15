@@ -10,8 +10,10 @@
     position: relative;
     top: 5vh;
     font-family: Starwars;
+    color: white;
+    text-shadow: 0 0 0.5em white;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2vw;
 }
 
 .about-me-container img {
