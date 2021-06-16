@@ -1,0 +1,29 @@
+@media (orientation: landscape){
+    .warning{
+    display: none;
+}
+}
+@media all and (orientation: portrait){
+   .warning{
+    position: absolute;
+    width: 70%;
+    height: 80vh;
+    background-color: rgb(233, 198, 45);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: black;
+    font-family: Starwars2;
+    text-align: center;
+    border-radius: 3em;
+
+    p{
+    position: absolute;
+    font-size: 4vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    }
+    }

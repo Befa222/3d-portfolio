@@ -24,13 +24,9 @@ export const Bomber = () => {
 
     const bomberRef = useRef()
 
-
-
-    useFrame(() => (
-        bomberRef.current.rotation.y = 5,
-        bomberRef.current.rotation.z += -0.003
-    ))
-
+    useFrame(() => bomberRef.current.rotation.y = 5)
+    useFrame(()=>bomberRef.current.rotation.z += -0.003)
+    
     return (
 
         gltf ?
@@ -60,12 +56,8 @@ export const Xwing = () => {
 
     const xWingRef = useRef()
 
-
-
-    useFrame(() => (
-        xWingRef.current.rotation.y = 5,
-        xWingRef.current.rotation.z += -0.003
-    ))
+    useFrame(() => xWingRef.current.rotation.y = 5 )
+    useFrame(()=>xWingRef.current.rotation.z += -0.003) 
 
     return (
 
@@ -96,13 +88,9 @@ export const DeathStar = () => {
 
     const deathSRef = useRef()
 
-
-
-    useFrame(() => (
-        deathSRef.current.rotation.y += -0.003,
-        deathSRef.current.rotation.z = -0.2
-    ))
-
+    useFrame(() => deathSRef.current.rotation.y += -0.003)
+    useFrame(()=> deathSRef.current.rotation.z = -0.2) 
+    
     return (
 
         gltf ?

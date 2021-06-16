@@ -17,7 +17,7 @@ export default function Intro() {
 
     return (
         <section id='video-container'>
-            <div className='warning'><h1>this project uses 3d rendering and will look better on a desktop/laptop screen. Please tilt your device in landscape mode.</h1></div>
+            
             {startButton && (
                 <button id='start-button' onClick={startVideo}>start</button>
             )}

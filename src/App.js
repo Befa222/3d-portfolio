@@ -9,11 +9,13 @@ import Weather from './routes/WeatherApp';
 import Universe from './routes/Universe';
 import About from './routes/AboutMe'
 import Credits from './routes/Credits'
+import './app.scss'
 
 
 function App() {
   return (
     <div>
+      <div className='warning'><p>this project uses 3d rendering and will look better on a bigger screen. Please tilt your device in landscape mode to continue.</p></div>
       <Router>
         <Switch>
           <Route path='/' exact component={Intro} />

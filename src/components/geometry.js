@@ -5,7 +5,7 @@ import { SpotLight } from '@react-three/drei'
 import * as THREE from "three"
 import JSONfont from '../fonts/StarJedi Special Edition_Regular.json'
 import '../style/home.scss'
-import {Link} from 'react-router-dom'
+
 
 
 export const FirstName = ({ args, position, color, offset = 0 }) => {
@@ -91,10 +91,10 @@ export const Spot = ({ position, args }) => {
     <SpotLight
       color='blue'
       ref={spotRef}
-      distance={7} // The diffuse-cone needs a fixed distance (default: 5)
-      angle={0.25} // The diffuse-cone needs a fixed angle (default: 0.15)
-      attenuation={4.5} // Diffuse-cone attenuation (default: 5)
-      anglePower={3} // Diffuse-cone anglePower (default: 5)
+      distance={7}
+      angle={0.25} 
+      attenuation={4.5} 
+      anglePower={3}
     />
   )
 }

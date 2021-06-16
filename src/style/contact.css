@@ -1,11 +1,11 @@
-.contact-page{
+.contact-page {
     width: 100%;
     min-height: 100vh;
     background-image: url('../images/starBG.png');
     animation: fade 1.5s linear;
 }
 
-#contact-title{
+#contact-title {
     position: relative;
     top: 7vh;
     text-align: center;
@@ -14,7 +14,8 @@
     color: white;
     text-shadow: 0 0 0.5em white;
 }
-form{
+
+form {
     position: absolute;
     top: 20vh;
     left: 25%;
@@ -25,7 +26,8 @@ form{
     align-items: center;
     justify-content: space-around;
 }
-.contact-name, .contact-email{
+
+.contact-name, .contact-email {
     font-family: AudioWide;
     text-align: center;
     height: 2vw;
@@ -34,9 +36,9 @@ form{
     background-color: transparent;
     color: white;
     font-size: 1.5vw;
-
 }
-textarea{
+
+textarea {
     font-family: Audiowide;
     font-size: 1vw;
     text-align: center;
@@ -46,7 +48,7 @@ textarea{
     color: white;
 }
 
-.send-button{
+.send-button {
     border: none;
     background: transparent;
     outline: none;
@@ -55,30 +57,32 @@ textarea{
     font-size: 2vw;
     cursor: pointer;
 }
-.send-button:hover{
+
+.send-button:hover {
     font-family: Starwars2;
 }
-.thanks-popup{
+
+.thanks-popup {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
     height: 60vh;
     background-color: rgb(233, 198, 45);
+    border-radius: 0.5em;
     color: black;
     text-align: center;
     font-family: Audiowide;
     font-size: 2.1vw;
     z-index: 100;
-
 }
 
-#popup-button{
+#popup-button {
     border: none;
     outline: none;
     font-family: Starwars;
@@ -87,62 +91,61 @@ textarea{
     cursor: pointer;
 }
 
-#popup-button:hover{
-font-family: Starwars2;
+#popup-button:hover {
+    font-family: Starwars2;
 }
 
-.github-img{
+.github-img {
     position: absolute;
     bottom: 7vh;
     left: 40%;
     cursor: pointer;
 }
-.linkedin-img{
+
+.linkedin-img {
     position: absolute;
     bottom: 7vh;
     right: 40%;
     cursor: pointer;
 }
-.github-img:hover, .linkedin-img:hover{
+
+.github-img:hover, .linkedin-img:hover {
     transform: scale(1.1);
 }
 
-
-@media (orientation: landscape) and (max-width: 900px){
-    #contact-title{
+@media (orientation: landscape) and (max-width: 900px) {
+    #contact-title {
         top: 15vh;
         font-size: 3vw;
     }
-    form{
+    form {
         top: 35vh;
         height: 100vh;
     }
-    .contact-name, .contact-email{
+    .contact-name, .contact-email {
         font-size: 2vw;
     }
-    textarea{
+    textarea {
         font-size: 1.5vw;
     }
-    
-    .send-button{
+    .send-button {
         font-size: 3vw;
     }
-    .thanks-popup{
+    .thanks-popup {
         font-size: 2.1vw;
     }
-    .github-img{
-    top: 140vh;
-    left: 30%;
-}
-.linkedin-img{
-    top: 140vh;
-    right: 30%;
-}
+    .github-img {
+        top: 140vh;
+        left: 30%;
+    }
+    .linkedin-img {
+        top: 140vh;
+        right: 30%;
+    }
 }
 
-
-@media (orientation: landscape) and (max-width: 1425px){
-    img{
+@media (orientation: landscape) and (max-width: 1425px) {
+    img {
         transform: scale(0.7);
     }
 }

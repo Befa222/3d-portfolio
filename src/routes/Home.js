@@ -1,4 +1,4 @@
-import React, { useState, Suspense, UseP } from 'react'
+import React, { useState, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Reflector, Stars, useProgress, Html } from '@react-three/drei'
 import { FirstName, LastName, Button1, Button2, Button3, Button4 } from '../components/geometry'
