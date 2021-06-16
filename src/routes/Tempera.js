@@ -14,7 +14,7 @@ export default function Tempera() {
             <div className='tempera4'></div>
             
             <div className='text-container'>
-            <p>24 hour hackathon at Wild Code School.</p>
+            <p>24 hour hackathon (Winners).</p>
             <p>Tablets only app which 'takes' pictures in black and white and colorize them!</p>
             <p>We were a team of 5.</p>
             <p>STACK : React, React-router, NPM, Unsplash API, JS.</p>

@@ -6,7 +6,7 @@
     text-align: center;
     font-family: Audiowide;
 }
-.credits h1{
+.credits-title{
     position: relative;
     top: 10vh;
     font-family: Starwars;
@@ -28,7 +28,7 @@
 .credits-text a:hover, .artists-links a:hover{
     color: blue;
 }
-.credits h2{
+.credits-artists{
     position: relative;
     top: 18vh;
     font-family: Starwars;
