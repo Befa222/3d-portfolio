@@ -1,9 +1,10 @@
 import React from 'react'
 import NavBar from '../components/navBar'
+import '../style/allProjects.css'
 
 export default function WeatherApp() {
     return (
-        <div className='project-container3'>
+        <section className='project-container3'>
             <NavBar/>
             <h1 className='project-title'>WEATHER APP</h1>
 
@@ -15,6 +16,6 @@ export default function WeatherApp() {
                 <p>App made for training purpose with Neumorphism and Glassmorphism style.</p>
                 <p>STACK : React, NPM, JS, Styled components, Open-weather API.</p>
             </div>
-        </div>
+        </section>
     )
 }

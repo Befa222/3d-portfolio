@@ -1,9 +1,10 @@
 import React from 'react'
 import NavBar from '../components/navBar'
+import '../style/allProjects.css'
 
 export default function Universe() {
     return (
-        <div className='project-container4'>
+        <section className='project-container4'>
             <NavBar/>
             <h1 className='project-title'>WILD UNIVERSE</h1>
 
@@ -17,7 +18,7 @@ export default function Universe() {
                 <p>Fully responsive.</p>
                 <p>STACK : HTML, CSS, JS.</p>
             </div>
-        </div>
+        </section>
     )
 }
 

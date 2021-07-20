@@ -1,23 +1,28 @@
-.project-container1, .project-container2, .project-container3, .project-container4{
+.project-container1, .project-container2, .project-container3, .project-container4 {
     width: 100%;
     height: 100vh;
     background-image: url('../images/starBG.png');
     font-family: 'AudioWide';
     animation: fade 2s linear;
 }
-.project-container1{
+
+.project-container1 {
     color: rgb(0, 153, 255);
 }
-.project-container2{
+
+.project-container2 {
     color: orange;
 }
-.project-container3{
+
+.project-container3 {
     color: rgb(4, 199, 4);
 }
-.project-container4{
+
+.project-container4 {
     color: rgb(182, 6, 226);
 }
-.project-title{
+
+.project-title {
     position: relative;
     top: 8vh;
     text-align: center;
@@ -26,9 +31,9 @@
     text-shadow: 0 0 0.5em white;
 }
 
-.text-container{
+.text-container {
     position: absolute;
-    top: 30vh;
+    top: 27vh;
     right: 5vw;
     width: 45%;
     height: 25vh;
@@ -37,12 +42,12 @@
     line-height: 1.7;
 }
 
-.netlify-button-weather, .netlify-button-universe{
+.netlify-button-weather, .netlify-button-universe, .netlify-button-pickachew {
     position: absolute;
     width: 8vw;
     height: 8vw;
     right: 23vw;
-    bottom: 4vh;
+    bottom: 2vh;
     background: transparent;
     color: red;
     padding: 0.5em 0.6em 0.5em 0.6em;
@@ -54,13 +59,32 @@
     cursor: pointer;
 }
 
-
-.netlify-button-weather:hover, .netlify-button-universe:hover{
+.netlify-button-weather:hover, .netlify-button-universe:hover, .netlify-button-pickachew:hover {
     transform: scale(1.1);
     transition-duration: 0.2s;
 }
+.pika-image-container{
+    position: absolute;
+    top: 20vh;
+    left: 3%;
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.pickachew-mobile{
+    width: 12vw;
+    height: auto;
+    
+}
+.pickachew-desktop{
+    width: 30vw;
+    height: auto;
+}
 
-.tempera1, .tempera2, .tempera3, .tempera4, .pika1, .pika2, .pika3, .pika4, .weather-app, .universe {
+.tempera1, .tempera2, .tempera3, .tempera4, .weather-app, .universe {
     position: absolute;
     top: 25%;
     left: 5%;
@@ -69,29 +93,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
-.pika1 {
-    background-image: url('../images/pickachew1.jpg');
-    z-index: 3;
-    animation: carousel1 14s infinite;
-}
-
-.pika2 {
-    background-image: url('../images/pickachew2.jpg');
-    z-index: 2;
-    animation: carousel2 14s infinite;
-}
-
-.pika3 {
-    background-image: url('../images/pickachew3.jpg');
-    z-index: 1;
-    animation: carousel3 14s infinite;
-}
-
-.pika4 {
-    background-image: url('../images/pickachew4.jpg');
-    z-index: 1;
-    animation: carousel4 14s infinite;
 }
 
 .tempera1 {
@@ -118,19 +119,22 @@
     animation: carousel4 14s infinite;
 }
 
-.weather-app{
+.weather-app {
     background-image: url('../images/weather.jpg');
 }
 
-.universe{
+.universe {
     background-image: url('../images/wildUniverse.jpg');
 }
 
 @keyframes fade {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
 
 /* ////////////////// KEYFRAMES CAROUSEL ///////////////////////////*/
 

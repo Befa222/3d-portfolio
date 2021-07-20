@@ -4,7 +4,7 @@ import '../style/allProjects.css'
 
 export default function Tempera() {
     return (
-        <div className='project-container2'>
+        <section className='project-container2'>
             <NavBar/>
             <h1 className='project-title'>TEMPERA</h1>
             
@@ -19,6 +19,6 @@ export default function Tempera() {
             <p>We were a team of 5.</p>
             <p>STACK : React, React-router, NPM, Unsplash API, JS.</p>
             </div>
-        </div>
+        </section>
     )
 }
