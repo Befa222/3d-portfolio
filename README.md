@@ -6,6 +6,8 @@ My first take on 3d with React Three fiber.
 
 In the project directory, you can run:
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
